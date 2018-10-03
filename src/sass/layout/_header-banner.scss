@@ -1,0 +1,109 @@
+#header-banner {
+    padding: 150px 0 80px;
+    background: url('../images/bg/header-banner-bg.jpg') 50% 50% /cover no-repeat;
+}
+
+.header-banner-item {
+
+    .social-block {
+        top: 40%;
+        right: -150px;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            top: 90%;
+            right: 20px;
+        }
+
+        &__title {
+            position: absolute;
+            top: 30%;
+            left: -135px;
+            padding-right: 40px;
+            width: 200px;
+            transform:  rotate(-90deg);
+            color: $light;
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                transform: rotate(0);
+                left: -230px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 30px;
+                height: 2px;
+                background: $light;
+            }
+        }
+    }
+
+    &-img {
+        width: 100%;
+        padding-top: 670px;
+        box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+        @extend %img;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -220px;
+            bottom: 30px;
+            width: 220px;
+            height: 400px;
+            background: $primary;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 45%;
+            right: 15%;
+            height: 15px;
+            background: $primary;
+        }
+    }
+    
+    &-description {
+        top: 110px;
+        left: -160px;
+        padding: 80px 70px 70px;
+        width: 100%;
+        max-width: 800px;
+        box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+        
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            top: 60px;
+            left: 0;
+            padding: 40px 50px 20px;
+            padding-right: 15px;
+        }
+    }
+
+    &__btn {
+        left: -80px;
+        bottom: 60px;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            left: 15px;
+            bottom: 10%;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -140px;
+        left: 50%;
+        right: -200px;
+        bottom: -130px;
+        background: $dark;
+
+        @media (max-width: map_get($grid-breakpoints, xl)) {
+            display: none;
+        }
+    }
+}

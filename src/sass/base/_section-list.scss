@@ -1,0 +1,19 @@
+.section-list {
+    margin: 0;
+
+    &-item {
+        position: relative;
+        margin-bottom: 25px;
+        padding-left: 50px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background: $primary;
+        }
+    }
+}

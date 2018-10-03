@@ -4,10 +4,13 @@
     left: 0;
     right: 0;
     background: transparent;
+    z-index: 9999;
 
     &.is-fixed {
         position: fixed;
-        background: rbga($dark, .9);
+        top: 0;
+        padding: 20px 0;
+        background: rgba($dark, .9);
         box-shadow: 0px 6px 44px 13px rgba(0, 0, 0, 0.3);
 
         .btn {

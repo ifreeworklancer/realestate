@@ -1,0 +1,131 @@
+#reviews {
+    padding: 90px 0 140px;
+    background: #28282d;
+    box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+
+    .section-title {
+        z-index: 3;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -130px;
+            left: -60px;
+            bottom: -40px;
+            width: 100%;
+            max-width: 130px;
+            background: $primary;
+            box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+            z-index: -5;
+        }
+    }
+
+    .slider-arrow {
+        margin-top: -80px;
+
+        @media (max-width: map_get($grid-breakpoints, xl)) {
+            margin-top: -45px;
+        }
+    }
+}
+
+.reviews-slider {
+
+    .flickity-page-dots {
+        bottom: -20px !important;
+
+        @media (max-width: map_get($grid-breakpoints, xl)) {
+            bottom: -70px !important;
+        }
+    }
+
+    &-item {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 50px;
+        width: 100%;
+        z-index: 10;
+
+
+        @media (max-width: map_get($grid-breakpoints, xl)) {
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+        &__img {
+            position: relative;
+            padding-top: 280px;
+            width: 100%;
+            max-width: 230px;
+            @extend %img;
+
+
+            @media (max-width: map_get($grid-breakpoints, xl)) {
+                margin: 0 auto 30px;
+            }
+        }
+
+        &-content {
+            position: relative;
+            margin-left: 60px;
+            max-width: 400px;
+            color: #fff;
+
+            @media (max-width: map_get($grid-breakpoints, xl)) {
+                margin-left: 0;
+            }
+
+            &__data {
+                margin-bottom: 20px;
+                color: #bbbbbb;
+            }
+
+            &__text {
+                position: relative;
+                margin: 0;
+                padding: 35px 20px 35px 35px;
+
+                @media (max-width: map_get($grid-breakpoints, xl)) {
+                    padding: 35px 15px;
+                }
+
+                &::before {
+                    content: '';
+                    @extend %pos;
+                    left: -250px;
+                    background: $dark;
+                    z-index: -5;
+
+                    @media (max-width: map_get($grid-breakpoints, xl)) {
+                        left: 0;
+                        right: 0;
+                    }
+
+                }
+            }
+
+            &__name {
+                position: absolute;
+                left: -120px;
+                right: 45px;
+                bottom: -45px;
+                padding: 10px 45px;
+                font-size: 24px;
+                font-weight: bold;
+                background: $primary;
+                box-shadow: 0px 5px 26px 6px rgba(0, 0, 0, 0.32);
+
+                @media (max-width: map_get($grid-breakpoints, xl)) {
+                    position: relative;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    padding: 10px 15px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

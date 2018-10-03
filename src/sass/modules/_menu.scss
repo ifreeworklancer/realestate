@@ -1,5 +1,7 @@
 .burger-menu-title {
+    position: relative;
     font-size: 16px;
+    z-index: 100;
 }
 
 .burger-menu {
@@ -7,6 +9,7 @@
     width: 36px;
     height: 36px;
     cursor: pointer;
+    z-index: 100;
 
     svg {
         fill: $primary;
@@ -63,17 +66,42 @@
     }
 }
 
+.thanks-page {
+
+    .menu {
+        padding: 0;
+        height: 100vh;
+    }
+}
+
 .menu {
     position: absolute;
-    top: 0;
+    top: -75px;
+    left: 0;
     right: 0;
-    height: 100vh;
-    max-height: 1100px;
+    padding: 55% 0 20%;
     background: $dark;
+    z-index: 99;
     display: none;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        left: 50%;
+        padding: 25% 0 20%;
+    }
+    
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+        left: 70%;
+        padding: 15% 0;
+    }
 
     &-list {
         margin: 0;
+        padding-left: 30px;
+        max-width: 500px;
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+            padding-left: 70px;
+        }
 
         &-item {
             margin-bottom: 40px;
@@ -84,27 +112,35 @@
 
             &__link {
                 position: relative;
-                padding-left: 70px;
-                font-size: 30px;
+                font-size: 22px;
                 font-weight: bold;
                 line-height: 1;
-                color: #d5d5d5;
+                color: #cccccc;
+
+                @media (min-width: map_get($grid-breakpoints, md)) {
+                    font-size: 30px;
+                }
+
 
                 &::before {
                     content: '';
                     position: absolute;
                     top: 0;
-                    left: 70px;
+                    left: -30px;
                     bottom: 0;
                     width: 0;
                     background: $primary;
+                    transition: .5s;
+
+                    @media (min-width: map_get($grid-breakpoints, lg)) {
+                        left: -70px;
+                    }
                 }
 
                 &:hover {
                     color: #fff;
 
                     &::before {
-                        left: 0;
                         width: 10px;
                     }
                 }

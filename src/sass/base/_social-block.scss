@@ -1,0 +1,14 @@
+.social-block {
+
+    &-list {
+
+        svg {
+            fill: $light;
+            transition: .5s;
+
+            &:hover {
+                fill: $primary;
+            }
+        }
+    }
+}

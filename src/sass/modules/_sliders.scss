@@ -1,0 +1,63 @@
+.slider-arrow {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+        user-select: none;
+        cursor: pointer;
+        transition: .5s;
+
+        &-icon {
+            padding: 15px 5px;
+            background: $light;
+            transition: .5s;
+
+            &--right {
+                transform: rotate(180deg)
+            }
+        }
+
+        &-text {
+            opacity: .7;
+            font-size: 16px;
+            color: $light;
+            transition: .5s;
+        }
+
+        &:hover {
+
+            .slider-arrow-item-icon {
+                background: $primary;
+            }
+
+            .slider-arrow-item-text {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.flickity-page-dots {
+    display: flex;
+    max-width: 450px;
+    left: 50%;
+    transform: translate(-50%);
+
+    @media (max-width: map_get($grid-breakpoints, xl)) {
+        bottom: -100px !important;
+    }
+
+    li {
+        flex: 1 0 auto;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        height: 2px !important;
+        background: $light !important;
+
+        &.is-selected {
+            height: 3px !important;
+            background: $primary !important;
+        }
+    }
+}

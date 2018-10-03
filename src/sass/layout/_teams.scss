@@ -1,0 +1,100 @@
+#teams {
+    padding: 180px 0 290px;
+    background: url('../images/bg/teams-bg.jpg') 50% 50% /cover no-repeat;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding-bottom: 120px;
+    }
+
+    .slider-arrow {
+        margin-top: 0;
+        z-index: 11;   
+
+        @media (min-width: map_get($grid-breakpoints, md)) {
+            margin-top: -60px;   
+        }
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+            margin-top: -170px;   
+        }
+    }
+
+    .section-title {
+        z-index: 3;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -75px;
+            bottom: -140px;
+            width: 100%;
+            max-width: 125px;
+            background: $primary;
+            z-index: -4;
+        }
+    }
+}
+
+.teams-slider {
+    z-index: 10;
+}
+
+.teams-slider-item {
+    top: 0;
+    padding: 0 30px;
+    width: 100%;
+    overflow: hidden;
+    transition: .5s;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding: 0 15px;
+        width: 50%;
+    }
+
+    @media (min-width: map_get($grid-breakpoints, xl)) {
+        width: 25%;
+    }
+
+    &-img {
+        position: relative;
+        top: 0;
+        padding-top: 370px;
+        @extend %img;
+        filter: grayscale(1);
+        transition: .5s;
+        border-bottom: 3px solid transparent;
+    }
+
+    &-description {
+        position: relative;
+        bottom: -100%;
+        padding-top: 25px;
+        padding-left: 25px;
+        opacity: 0;
+        transition: .4s ;
+
+        &-name {
+            color: #fff;
+        }
+
+        &-position {
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        top: -30px;
+
+        .teams-slider-item-img {
+            border-bottom: 3px solid $primary;
+            filter: grayscale(0);
+        }
+
+        .teams-slider-item-description {
+            bottom: 0;
+            opacity: 1;
+        }
+    }
+}

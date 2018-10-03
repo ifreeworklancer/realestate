@@ -1,0 +1,74 @@
+#services {
+    padding-top: 160px;
+    background: url('../images/bg/services-bg.jpg') 50% 50% /cover no-repeat;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding-top: 90px;
+    }
+
+    .section-title {
+        z-index: 3;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -25px;
+            left: -300px;
+            bottom: 45px;
+            right: 90%;
+            background: $primary;
+            z-index: -5;
+        }
+
+        &::after {
+            content: '';
+            @extend %pos;
+            background: $dark;
+            box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+            z-index: -4;
+        }
+    }
+}
+
+.services-content {
+    position: relative;
+    bottom: -40px;
+}
+
+.services-card {
+    position: relative;
+    padding-top: 10px;
+    background: #fff;
+    box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+
+    .btn {
+
+        .btn-icon {
+
+            &::before {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA3OS41MzYgNzkuNTM3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3OS41MzYgNzkuNTM3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI5Ljk0Miw3NC41NjUgMzQuNzk1LDc0LjU2NSAzNC43OTUsNTQuNjgxIDQ0LjczOSw1NC42ODEgNDQuNzM5LDc0LjU2NSA2OS41OTUsNzQuNTY1ICAgIDY5LjU5NSw0NC43MzkgNzkuNTM2LDQ0LjczOSAzOS43NjksNC45NzEgMCw0NC43MzkgOS45NDIsNDQuNzM5ICAiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=);
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 3;
+
+        &::before {
+            content: '';
+            @extend %pos;
+            left: -20px;
+            right: -20px;
+            background: $dark;
+            box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+            z-index: -3;
+
+
+            @media (max-width: map_get($grid-breakpoints, sm)) {
+                left: -10px;
+                right: -10px;
+            }
+        }
+    }
+}

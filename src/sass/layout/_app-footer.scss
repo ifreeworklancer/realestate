@@ -1,0 +1,49 @@
+#app-footer {
+    padding-top: 150px;
+    background: url('../images/bg/footer-bg.jpg') 50% 50% /cover no-repeat;
+
+    .section-title {
+        z-index: 3;
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -165px;
+            left: -50px;
+            bottom: -40px;
+            width: 100%;
+            max-width: 125px;
+            background: $primary;
+            box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+            z-index: -4;
+
+
+            @media (max-width: map_get($grid-breakpoints, md)) {
+                top: -120px;
+            }
+        }
+    }
+}
+
+.footer-copyr {
+    border-top: 1px solid #494952;
+
+    .social-block-list {
+
+        svg {
+            fill: #bbbbbb;
+
+            &:hover {
+                fill: $primary;
+            }
+        }
+    }
+
+    &-item {
+        margin: 0 auto;
+        width: 80%;
+        color: #93939e;
+        font-size: 16px;
+    }
+}
