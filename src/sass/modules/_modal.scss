@@ -1,0 +1,116 @@
+.modal-price {
+    position: absolute;
+    bottom: 5%;
+    width: 92%;
+    background: #fff;
+    box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    
+    &.is-active {
+        opacity: 1;
+        visibility: visible;
+        animation: bounceInUp 1s;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 36px;
+        height: 36px;
+        z-index: 5;
+        cursor: pointer;
+
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 2px;
+            transform: translate(-50%, -50%);
+            opacity: .4;
+            background: #fff;
+            transition: .5s;
+
+            &--left {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &--right {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+
+        &:hover {
+
+            .line {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__title {
+        z-index: 3;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50px;
+            bottom: -10px;
+            width: 100%;
+            max-width: 125px;
+            background: $primary;
+            box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
+            z-index: -2;
+        }
+    }
+}
+
+.modal-mask {
+    @extend %pos;
+    position: fixed;
+    background: rgba($dark, .8);
+    z-index: 998;
+    transition: .4s;
+    visibility: hidden;
+
+    &.is-active {
+        visibility: visible;
+    }
+}
+
+@keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    from {
+      opacity: 0;
+      transform: translate3d(0, 3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    75% {
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    90% {
+      transform: translate3d(0, -5px, 0);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+

@@ -1,9 +1,76 @@
 #header-banner {
     padding: 150px 0 80px;
     background: url('../images/bg/header-banner-bg.jpg') 50% 50% /cover no-repeat;
+
+    .slider-arrow {
+        position: absolute;
+        right: -120px;
+        bottom: 60px;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            display: none;
+        }
+
+        .slider-arrow-item--header-banner-left {
+            margin-top: 20px;
+            margin-left: -100px;
+        }
+    }
+
+    .header-slider-nav {
+        position: absolute;
+        display: flex;
+        right: -140px;
+        bottom: -40px;
+        max-width: 130px;
+        font-weight: bold;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            display: none;
+        }
+
+        &-index {
+            padding-right: 10px;
+            font-size: 36px;
+            color: #fff;
+            line-height: 1;
+
+            &::before {
+                content: '0';
+            }
+        }
+
+        &-last {
+            position: relative;
+            bottom: -2px;
+            padding-left: 20px;
+            font-size: 24px;
+            color: #bbbbbb;
+
+            &::before {
+                content: '0';
+            }
+
+            &::after {
+                content: '/';
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+    .flickity-page-dots {
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            display: none;
+        }
+    }
 }
 
 .header-banner-item {
+    position: relative;
+    z-index: 3;
 
     .social-block {
         top: 40%;
@@ -20,7 +87,7 @@
             left: -135px;
             padding-right: 40px;
             width: 200px;
-            transform:  rotate(-90deg);
+            transform: rotate(-90deg);
             color: $light;
 
             @media (max-width: map_get($grid-breakpoints, md)) {
@@ -46,16 +113,6 @@
         box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
         @extend %img;
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: -220px;
-            bottom: 30px;
-            width: 220px;
-            height: 400px;
-            background: $primary;
-        }
-
         &::after {
             content: '';
             position: absolute;
@@ -66,7 +123,7 @@
             background: $primary;
         }
     }
-    
+
     &-description {
         top: 110px;
         left: -160px;
@@ -74,7 +131,7 @@
         width: 100%;
         max-width: 800px;
         box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.3);
-        
+
         @media (max-width: map_get($grid-breakpoints, md)) {
             top: 60px;
             left: 0;
@@ -105,5 +162,17 @@
         @media (max-width: map_get($grid-breakpoints, xl)) {
             display: none;
         }
+    }
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -220px;
+        bottom: 30px;
+        width: 220px;
+        height: 400px;
+        background: $primary;
+        z-index: -4;
     }
 }

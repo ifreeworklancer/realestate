@@ -160,7 +160,20 @@
                 <div class="row w-100 m-0 mt-5">
                     <div class="col-sm-8 p-0 mx-auto">
                         <div class="header-banner-item position-relative">
-                            <div class="header-banner-item-img position-relative" style="background-image: url('images/content/header-banner/header-banner-item-1.jpg');"></div>
+                            <div class="header-banner-slider">
+                                <div class="header-banner-slider-item">
+                                    <div class="header-banner-item-img position-relative" style="background-image: url('images/content/header-banner/header-banner-item-1.jpg');"></div>
+                                </div>
+                                <div class="header-banner-slider-item">
+                                    <div class="header-banner-item-img position-relative" style="background-image: url('images/content/header-banner/header-banner-item-2.jpg');"></div>
+                                </div>
+                                <div class="header-banner-slider-item">
+                                    <div class="header-banner-item-img position-relative" style="background-image: url('images/content/header-banner/header-banner-item-3.jpg');"></div>
+                                </div>
+                                <div class="header-banner-slider-item">
+                                    <div class="header-banner-item-img position-relative" style="background-image: url('images/content/header-banner/header-banner-item-4.jpg');"></div>
+                                </div>
+                            </div>
                             <div class="header-banner-item-description bg-dark text-white position-absolute">
                                 <h2 class="header-banner-item-description__title mb-5">
                                     Мы улучшаем качество жизни, путём
@@ -205,6 +218,32 @@
                                         </a>
                                     </li>
                                 </ul>
+                            </div>
+                            <div class="slider-arrow ml-auto flex-column-reverse">
+                                <div class="slider-arrow-item slider-arrow-item--header-banner-left d-flex align-items-center">
+                                    <div class="slider-arrow-item-text mr-3">
+                                        Назад
+                                    </div>
+                                    <div class="slider-arrow-item-icon slider-arrow-item-icon--left">
+                                        <svg width="60" height="30">
+                                            <use xlink:href="#slider-arrow-icon"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="slider-arrow-item slider-arrow-item--header-banner-right d-flex align-items-center">
+                                    <div class="slider-arrow-item-icon slider-arrow-item-icon--right">
+                                        <svg width="60" height="30">
+                                            <use xlink:href="#slider-arrow-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="slider-arrow-item-text ml-3">
+                                        Вперед
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-slider-nav">
+                                <div class="header-slider-nav-index"></div>
+                                <div class="header-slider-nav-last"></div>
                             </div>
                         </div>
                     </div>
@@ -570,10 +609,10 @@
                                 <div class="services-card__title bg-dark text-white mb-4 py-5 text-center font-weight-bold">Продажа
                                     недвижимости</div>
                                 <p class="services-card__text mb-3 px-4">
-                                    Купила квартиру-студию в центре, трёшку, 120 квадратных
-                                    метров, очень быстро нашли, ребята помогли оформить. Спасибо. Рекомендую.
+                                    Мы знаем как правильно подготовить, оценить, сделать продажный маркетинг
+                                    недвижимости клиента. Что бы получить максимальную стоимость на рынке.
                                 </p>
-                                <a href="#app-footer" class="btn btn-light scroll-link d-block text-uppercase font-weight-bold">
+                                <a href="#" class="btn btn-light btn-open-price-modal d-block text-uppercase font-weight-bold">
                                     <div class="btn-icon"></div>
                                     УЗНАТЬ ЦЕНУ
                                 </a>
@@ -585,13 +624,68 @@
                                     продажа
                                     и покупка недвижимости</div>
                                 <p class="services-card__text mb-3 px-4">
-                                    Купила квартиру-студию в центре, трёшку, 120 квадратных
-                                    метров, очень быстро нашли, ребята помогли оформить. Спасибо. Рекомендую.
+                                    Наши услуги- Одномоментная продажа и покупка недвижимости- Знание рынка помогает
+                                    нам одномоментно продать существующую недвижимость и найти идеальный вариант для
+                                    покупки новой недвижимости.
                                 </p>
-                                <a href="#app-footer" class="btn btn-light scroll-link d-block text-uppercase font-weight-bold">
+                                <a href="#" class="btn btn-light btn-open-price-modal d-block text-uppercase font-weight-bold">
                                     <div class="btn-icon"></div>
                                     УЗНАТЬ ЦЕНУ
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="row">
+                        <div class="col-sm-7 col-lg-5 mx-auto">
+                            <div class="modal-price">
+                                <div id="close-modal-price" class="close-modal">
+                                    <div class="line line--left"></div>
+                                    <div class="line line--right"></div>
+                                </div>
+                                <h2 class="modal-price__title position-relative py-5 pr-5 bg-dark text-white text-center mb-5">
+                                    Узнать цену
+                                </h2>
+                                <div class="modal-price-form">
+                                    <form action="#" id="form-price">
+                                        <div class="form-row d-flex flex-column align-items-center">
+                                            <div class="form-group position-relative mb-5">
+                                                <label for="user-name--price" class="label-placeholder position-absolute">
+                                                    <svg width="15" height="15">
+                                                        <use xlink:href="#user-icon"></use>
+                                                    </svg>
+                                                    Введите ваше имя
+                                                </label>
+                                                <input type="text" class="form-control position-relative" id="user-name--price">
+                                            </div>
+                                            <div class="form-group position-relative mb-5">
+                                                <label for="user-phone--price" class="label-placeholder position-absolute">
+                                                    <svg width="15" height="15">
+                                                        <use xlink:href="#mobile-icon"></use>
+                                                    </svg>
+                                                    Номер телефона
+                                                </label>
+                                                <input type="text" class="form-control position-relative" id="user-phone--price">
+                                            </div>
+                                            <div class="form-group position-relative mb-5">
+                                                <label for="email--price" class="label-placeholder position-absolute">
+                                                    <svg width="15" height="15">
+                                                        <use xlink:href="#email-icon"></use>
+                                                    </svg>
+                                                    E-mail
+                                                </label>
+                                                <input type="email" class="form-control position-relative" id="email--price">
+                                            </div>
+                                        </div>
+                                        <div class="text-right mb-4">
+                                            <button class="btn btn-dark mr-5 text-white">
+                                                <span class="btn-icon d-block"></span>
+                                                Отправить
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -700,6 +794,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Mask -->
+    <div class="modal-mask"></div>
 
     <!-- Script -->
     <script src="dist/app.js"></script>

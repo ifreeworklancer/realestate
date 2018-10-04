@@ -3,6 +3,15 @@
     margin-bottom: 90px;
 }
 
+#form-price {
+    margin-top: 120px;
+    margin-bottom: 90px;
+
+    .form-control {
+        color: $dark;
+    }
+}
+
 .form-group {
 
     &.in-focus {
