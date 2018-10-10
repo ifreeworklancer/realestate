@@ -651,7 +651,7 @@
                                     Узнать цену
                                 </h2>
                                 <div class="modal-price-form">
-                                    <form action="#" id="form-price">
+                                    <form action="/mail-send.php" id="form-price">
                                         <div class="form-row d-flex flex-column align-items-center">
                                             <div class="form-group position-relative mb-5">
                                                 <label for="user-name--price" class="label-placeholder position-absolute">
@@ -660,7 +660,7 @@
                                                     </svg>
                                                     Введите ваше имя
                                                 </label>
-                                                <input type="text" class="form-control position-relative" id="user-name--price">
+                                                <input type="text" name="name" class="form-control position-relative" id="user-name--price" required>
                                             </div>
                                             <div class="form-group position-relative mb-5">
                                                 <label for="user-phone--price" class="label-placeholder position-absolute">
@@ -669,7 +669,7 @@
                                                     </svg>
                                                     Номер телефона
                                                 </label>
-                                                <input type="text" class="form-control position-relative" id="user-phone--price">
+                                                <input type="tel" name="phone" class="form-control position-relative" id="user-phone--price" required>
                                             </div>
                                             <div class="form-group position-relative mb-5">
                                                 <label for="email--price" class="label-placeholder position-absolute">
@@ -678,7 +678,7 @@
                                                     </svg>
                                                     E-mail
                                                 </label>
-                                                <input type="email" class="form-control position-relative" id="email--price">
+                                                <input type="email" name="email" class="form-control position-relative" id="email--price" required>
                                             </div>
                                         </div>
                                         <div class="text-right mb-4">
@@ -709,7 +709,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <form action="#" id="form-feedback">
+                    <form action="/mail-send.php" id="form-feedback">
                         <div class="form-row d-flex flex-column flex-lg-row align-items-center">
                             <div class="form-group position-relative mb-5 mb-lg-0 mr-lg-5">
                                 <label for="user-name" class="label-placeholder position-absolute">
@@ -718,7 +718,7 @@
                                     </svg>
                                     Введите ваше имя
                                 </label>
-                                <input type="text" class="form-control position-relative" id="user-name">
+                                <input type="text" name="name" class="form-control position-relative" id="user-name" required>
                             </div>
                             <div class="form-group position-relative mb-5 mb-lg-0 mr-lg-5">
                                 <label for="user-phone" class="label-placeholder position-absolute">
@@ -727,7 +727,7 @@
                                     </svg>
                                     Номер телефона
                                 </label>
-                                <input type="text" class="form-control position-relative" id="user-phone">
+                                <input type="tel" name="phone" class="form-control position-relative" id="user-phone">
                             </div>
                             <div class="form-group position-relative mb-5 mb-lg-0 mr-lg-5">
                                 <label for="email" class="label-placeholder position-absolute">
@@ -736,7 +736,7 @@
                                     </svg>
                                     E-mail
                                 </label>
-                                <input type="email" class="form-control position-relative" id="email">
+                                <input type="email" name="email" class="form-control position-relative" id="email">
                             </div>
                         </div>
                         <div class="text-center text-lg-right">
