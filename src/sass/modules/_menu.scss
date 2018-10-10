@@ -106,6 +106,10 @@
         &-item {
             margin-bottom: 40px;
 
+            @media (max-width: 1200px) {
+                margin-bottom: 30px;
+            }
+
             &:last-of-type {
                 margin-bottom: 0;
             }
@@ -121,6 +125,9 @@
                     font-size: 30px;
                 }
 
+                @media (max-width: 1200px) {
+                    font-size: 24px;
+                }
 
                 &::before {
                     content: '';
