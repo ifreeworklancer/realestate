@@ -1,6 +1,7 @@
 #header-banner {
     padding: 150px 0 80px;
     background: url('../images/bg/header-banner-bg.jpg') 50% 50% /cover no-repeat;
+    z-index: 5;
 
     .slider-arrow {
         position: absolute;
@@ -146,7 +147,7 @@
 
     &__btn {
         left: -80px;
-        bottom: 60px;
+        bottom: 90px;
 
         @media (max-width: map_get($grid-breakpoints, md)) {
             left: 15px;

@@ -43,6 +43,7 @@
     max-width: 450px;
     left: 50%;
     transform: translate(-50%);
+    pointer-events: none;
 
     @media (max-width: map_get($grid-breakpoints, xl)) {
         bottom: -100px !important;

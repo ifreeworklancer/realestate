@@ -80,12 +80,14 @@
             &__data {
                 margin-bottom: 20px;
                 color: #bbbbbb;
+                font-size: 14px;
             }
 
             &__text {
                 position: relative;
                 margin: 0;
-                padding: 35px 20px 35px 35px;
+                padding: 35px 20px 35px 10px;
+                font-size: 14px;
 
                 @media (max-width: map_get($grid-breakpoints, xl)) {
                     padding: 35px 15px;
