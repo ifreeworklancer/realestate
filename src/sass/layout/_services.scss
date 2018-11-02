@@ -1,5 +1,5 @@
 #services {
-    padding-top: 160px;
+    padding: 160px 0 80px;
     background: url('../images/bg/services-bg.jpg') 50% 50% /cover no-repeat;
 
     @media (max-width: map_get($grid-breakpoints, sm)) {
@@ -32,7 +32,6 @@
 
 .services-content {
     position: relative;
-    bottom: -40px;
 }
 
 .services-card {
@@ -69,6 +68,13 @@
                 left: -10px;
                 right: -10px;
             }
+        }
+    }
+
+    &-list {
+
+        li {
+            font-size: 13px;
         }
     }
 }

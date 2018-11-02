@@ -121,31 +121,31 @@ import 'flickity/dist/flickity.css';
 /**
  * Sliders teams
  */
-if ($('.teams-slider')) {
-    var elem1 = document.querySelector('.teams-slider');
-    if (elem1) {
+// if ($('.teams-slider')) {
+//     var elem1 = document.querySelector('.teams-slider');
+//     if (elem1) {
 
-        const flkty1 = new Flickity(elem1, {
-            prevNextButtons: false,
-            cellAlign: 'left',
-            contain: true,
-        });
+//         const flkty1 = new Flickity(elem1, {
+//             prevNextButtons: false,
+//             cellAlign: 'left',
+//             contain: true,
+//         });
 
 
-        var prevArrowTeams = document.querySelector('.slider-arrow-item--teams-left');
+//         var prevArrowTeams = document.querySelector('.slider-arrow-item--teams-left');
 
-        prevArrowTeams.addEventListener('click', function () {
-            flkty1.previous(false, false);
-        });
+//         prevArrowTeams.addEventListener('click', function () {
+//             flkty1.previous(false, false);
+//         });
 
-        var nextArrowTeams = document.querySelector('.slider-arrow-item--teams-right');
+//         var nextArrowTeams = document.querySelector('.slider-arrow-item--teams-right');
 
-        nextArrowTeams.addEventListener('click', function () {
-            flkty1.next(false, false);
-        });
+//         nextArrowTeams.addEventListener('click', function () {
+//             flkty1.next(false, false);
+//         });
 
-    }
-}
+//     }
+// }
 
 
 /**

@@ -1,5 +1,5 @@
 #header-banner {
-    padding: 150px 0 80px;
+    padding: 120px 0 80px;
     background: url('../images/bg/header-banner-bg.jpg') 50% 50% /cover no-repeat;
     z-index: 5;
 
@@ -72,10 +72,12 @@
 .header-banner-item {
     position: relative;
     z-index: 3;
+    height: 600px;
+
 
     .social-block {
-        top: 40%;
         right: -150px;
+        bottom: 50px;
 
         @media (max-width: map_get($grid-breakpoints, md)) {
             top: 90%;
@@ -126,7 +128,7 @@
     }
 
     &-description {
-        top: 110px;
+        top: 0;
         left: -160px;
         padding: 60px 70px 40px;
         width: 100%;
@@ -155,19 +157,6 @@
         }
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: -140px;
-        left: 50%;
-        right: -200px;
-        bottom: -130px;
-        background: $dark;
-
-        @media (max-width: map_get($grid-breakpoints, xl)) {
-            display: none;
-        }
-    }
 
 
     &::after {

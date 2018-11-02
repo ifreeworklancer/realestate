@@ -38,6 +38,7 @@
 
 .teams-slider {
     z-index: 10;
+    display: flex;
 }
 
 .teams-slider-item {
@@ -70,17 +71,23 @@
         position: relative;
         bottom: -100%;
         padding-top: 25px;
-        padding-left: 25px;
         opacity: 0;
-        transition: .4s ;
+        transition: .4s;
 
         &-name {
             color: #fff;
+            text-align: center;
+            font-size: 16px;
         }
 
         &-position {
             font-size: 16px;
             color: #fff;
+            text-align: center;
+
+            svg {
+                fill: $primary;
+            }
         }
     }
 
