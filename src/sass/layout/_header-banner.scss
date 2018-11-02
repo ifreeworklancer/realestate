@@ -2,6 +2,7 @@
     padding: 120px 0 80px;
     background: url('../images/bg/header-banner-bg.jpg') 50% 50% /cover no-repeat;
     z-index: 5;
+    overflow: hidden;
 
     .slider-arrow {
         position: absolute;
@@ -140,7 +141,7 @@
         }
 
         @media (max-width: map_get($grid-breakpoints, md)) {
-            top: 60px;
+            top: -20px;
             left: 0;
             padding: 40px 50px 20px;
             padding-right: 15px;
